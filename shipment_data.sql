@@ -1,0 +1,65 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 22, 2024 at 12:25 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `shipment_management`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shipment data`
+--
+
+CREATE TABLE `shipment data` (
+  `ShipmentID` int(10) NOT NULL,
+  `ORIGIN` varchar(55) NOT NULL,
+  `DESTINATION` varchar(60) NOT NULL,
+  `WEIGHT(kg)` int(10) NOT NULL,
+  `STATUS` varchar(100) NOT NULL,
+  `PAYMENT` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `shipment data`
+--
+
+INSERT INTO `shipment data` (`ShipmentID`, `ORIGIN`, `DESTINATION`, `WEIGHT(kg)`, `STATUS`, `PAYMENT`) VALUES
+(1, 'UNITED STATES', 'LONDON', 25, 'PENDIND', 'CASH'),
+(2, 'CANADA', 'ENGLAND', 100, 'DELIVERED', 'BANK TRANS'),
+(3, 'CHAD', 'KENYA', 25, 'IN TRANSIT', 'BANK TRANSFER'),
+(0, 'ORIGIN', 'DESTINATION', 0, 'STATUS', 'PAYMENT METHOD'),
+(3, 'NIGERIA', 'GHANA', 25, 'IN TRANSIT', 'CASH'),
+(4, 'LONDON', 'BELGIUM', 65, 'PENDING', 'BANK TRANSFER'),
+(5, 'AUSTRALIA', 'CANADA', 44, 'PENDING', 'CARD'),
+(6, 'BRAZIL', 'MADAGASCAR', 100, 'IN TRANSIT', 'CASH'),
+(7, 'CHINA', 'THAILAND', 55, 'DELIVERED', 'BANK TRANSFER'),
+(8, 'JAPAN', 'THAILAND', 150, 'DELIVERED', 'CARD'),
+(9, 'SOUTH KOREA', 'QATAR', 62, 'DELIVERED', 'CARD'),
+(10, 'CUBA', 'SAMOA', 11, 'IN TRANSIT', 'CASH'),
+(11, 'EGYPT', 'SPAIN', 54, 'PENDING', 'CASH'),
+(12, 'FRANCE', 'SWEDAN', 87, 'PENDING', 'BANK TRANSFER'),
+(13, 'GREECE', 'TURKEY', 33, 'DELIVERED', 'BANK TRANSFER'),
+(14, 'ITALY', 'TOGO', 12, 'PENDING', 'BANK TRANSFER'),
+(15, 'SPAIN', 'MALI', 45, 'IN TRANSIT', 'BANK TRANSFER');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
